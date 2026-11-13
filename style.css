@@ -66,6 +66,59 @@ img {
     background-color: #B97883;
 }
 
+/* TABLE */
+
+.table-card {
+    background-color: var(--white);
+    padding: 25px;
+    margin: 30px 0 60px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(84, 44, 70, 0.1);
+    overflow-x: auto;
+}
+
+.table-card table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.table-card th {
+    background-color: var(--plum);
+    color: var(--ivory);
+    padding: 16px;
+}
+
+.table-card td {
+    padding: 15px;
+    border-bottom: 1px solid var(--soft-pink);
+}
+
+.table-card tr:nth-child(even) {
+    background-color: var(--soft-pink);
+}
+
+.table-card tr:hover {
+    background-color: var(--ivory);
+}
+
+.table-card tr:last-child td {
+    border-bottom: none;
+}
+
+@media (max-width: 560px) {
+
+    .table-card {
+        padding: 12px;
+    }
+
+    .table-card th,
+    .table-card td {
+        padding: 10px 6px;
+        font-size: 13px;
+    }
+
+}
 
 /* CLASS SELECTOR */
 

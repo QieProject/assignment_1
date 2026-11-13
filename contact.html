@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Qieys - Contact Us</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="navbar">
+
+            <a href="index.html" class="brand">
+                QIEYS<span>.</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <h1>Get In Touch</h1>
+            <p>
+                Have questions or interested in ordering our chocolates?
+                We would love to hear from you! Send us a message and
+                let us make your chocolate experience sweeter.
+            </p>
+        </section>
+
+        <section class="section">
+
+            <div class="section-heading">
+                <h2>Contact Us</h2>
+                <p>Feel free to share your questions, enquiries or feedback with us.</p>
+            </div>
+
+            <div class="form-card">
+
+                <form id="contactForm">
+
+                    <label for="customerName">Full Name</label>
+                    <input type="text" id="customerName" name="customerName" placeholder="Enter your full name">
+
+                    <label for="customerEmail">Email Address</label>
+                    <input type="email" id="customerEmail" name="customerEmail" placeholder="Enter your email address">
+
+                    <label for="customerPhone">Phone Number</label>
+                    <input type="tel" id="customerPhone" name="customerPhone" placeholder="Example: 0123456789">
+
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject">
+                        <option value="">Select a subject</option>
+                        <option value="Product Enquiry">Product Enquiry</option>
+                        <option value="Order Enquiry">Order Enquiry</option>
+                        <option value="Feedback">Feedback</option>
+                        <option value="Others">Others</option>
+                    </select>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+
+                    <br>
+
+                    <button type="submit" class="btn btn-primary">
+                        Submit Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <section class="section">
+
+            <div class="section-heading">
+                <h2>Our Chocolate Price List</h2>
+                <p>Explore our delicious chocolate selections and their prices.</p>
+            </div>
+
+            <div class="table-card">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Chocolate</th>
+                            <th>Topping</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Milk Chocolate</td>
+                            <td>Biscoff</td>
+                            <td>RM15.00</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>White Chocolate</td>
+                            <td>Cookie Crumbs</td>
+                            <td>RM15.00</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Dark Chocolate</td>
+                            <td>Crushed Peanut</td>
+                            <td>RM18.00</td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td>Qieys Coins</td>
+                            <td>-</td>
+                            <td>RM 9.90 (per kg)/td>
+                        </tr>
+
+                        <tr>
+                            <td>5</td>
+                            <td>Choco Pearls</td>
+                            <td>-</td>
+                            <td>RM 9.90 (per kg)</td>
+                        </tr>
+
+                        <tr>
+                            <td>6</td>
+                            <td>Sweetheart Special</td>
+                            <td>-</td>
+                            <td>RM 29.90/td>
+                        </tr>
+
+                    </tbody>
+                    
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>Sweet Moments, Crafted for You.</p>
+        <p class="copyright">
+            &copy; 2026 QIEYS Chocolate. All Rights Reserved.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("customerName").value.trim();
+            let email = document.getElementById("customerEmail").value.trim();
+            let phone = document.getElementById("customerPhone").value.trim();
+            let subject = document.getElementById("subject").value;
+            let message = document.getElementById("message").value.trim();
+
+            if (name === "" || email === "" || phone === "" || subject === "" || message === "") {
+                alert("Please fill in all fields!");
+            }
+            else if (!isNaN(name)) {
+                alert("Please enter a valid name");
+                return
+            }
+            else if (!/^[0-9]{10,11}$/.test(phone)) {
+                alert("Please enter a valid phone number!");
+            }
+            else {
+                alert("Thank you, " + name + "! Your message has been submitted.");
+                document.getElementById("contactForm").reset();
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>

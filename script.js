@@ -70,18 +70,15 @@ function saveOrder(event) {
         alert("Please add at least one chocolate");
         return;
     }
-
-    if (name === "" || phoneNum === "" || address === "") {
+    else if (name === "" || phoneNum === "" || address === "") {
         alert("Please fill in all required fields");
         return;
     }
-
-    if (!isNaN(name)) {
+    else if (!isNaN(name)) {
         alert("Please enter a valid name");
         return
     }
-
-    if (!/^[0-9]{10,11}$/.test(phoneNum)) {
+    else if (!/^[0-9]{10,11}$/.test(phoneNum)) {
         alert("Please enter a valid phone number");
         return;
     }
@@ -118,13 +115,11 @@ function saveCustomOrder(event) {
         alert("Please fill in all required fields");
         return;
     }
-
-    if (!isNaN(name)) {
+    else if (!isNaN(name)) {
         alert("Please enter a valid name");
         return
     }
-
-    if (!/^[0-9]{10,11}$/.test(phoneNum)) {
+    else if (!/^[0-9]{10,11}$/.test(phoneNum)) {
         alert("Please enter a valid phone number");
         return;
     }
