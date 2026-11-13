@@ -145,6 +145,38 @@ function saveCustomOrder(event) {
     }
 }
 
+function contact(event) {
+
+    event.preventDefault();
+
+    let name = document.getElementById("customerName").value.trim();
+    let email = document.getElementById("customerEmail").value.trim();
+    let phone = document.getElementById("customerPhone").value.trim();
+    let subject = document.getElementById("subject").value;
+    let message = document.getElementById("message").value.trim();
+
+    if (name === "" || email === "" || phone === "" || subject === "" || message === "") {
+        alert("Please fill in all fields!");
+    }
+    else if (!isNaN(name)) {
+        alert("Please enter a valid name");
+        return;
+    }
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert("Please enter a valid email address!");
+        return;
+    }
+    else if (!/^[0-9]{10,11}$/.test(phone)) {
+        alert("Please enter a valid phone number!");
+        return
+    }
+    else {
+        alert("Thank you, " + name + "! Your message has been submitted.");
+        document.getElementById("contactForm").reset();
+    }
+
+};
+
 window.onload = function () {
     try {
         let savedCart = localStorage.getItem("cart");
