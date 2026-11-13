@@ -1,0 +1,401 @@
+/* COLOUR PALETTE */
+:root {
+    --dusty-pink: #D5A6A6;
+    --plum: #542C46;
+    --ivory: #FFF4E9;
+    --soft-pink: #F3DEDC;
+    --rose: #B97883;
+    --white: #FFFFFF;
+    --text: #392936;
+}
+
+
+/* ELEMENT SELECTOR */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--ivory);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    color: var(--plum);
+}
+
+p {
+    color: #806D79;
+}
+
+a {
+    text-decoration: none;
+    color: var(--plum);
+}
+
+img {
+    max-width: 100%;
+}
+
+/* TOGGLE MUSIC */
+
+#musicBtn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+
+    background-color: #542C46;
+    color: white;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#musicBtn:hover {
+    background-color: #B97883;
+}
+
+
+/* CLASS SELECTOR */
+
+.site-header {
+    background-color: var(--plum);
+    padding: 20px;
+}
+
+.navbar {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    color: var(--ivory);
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.brand span {
+    color: var(--dusty-pink);
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: var(--ivory);
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+/* HOVER SELECTOR */
+
+.nav-links a:hover {
+    background-color: var(--dusty-pink);
+    color: var(--plum);
+}
+
+.commercial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.commercial img {
+    width: 70%;
+    max-width: 700px;
+    height: 500px;
+    border-radius: 15px;
+}
+
+
+/* CONTAINER */
+
+.container {
+    width: 90%;
+    max-width: 1120px;
+    margin: auto;
+}
+
+.hero {
+    background: linear-gradient(
+        135deg,
+        var(--soft-pink),
+        var(--ivory)
+    );
+
+    padding: 60px 30px;
+    margin: 40px 0;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 45px;
+}
+
+.hero p {
+    max-width: 800px;
+    margin: 15px auto;
+}
+
+
+/* PRODUCT SECTION */
+
+.section {
+    padding: 30px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background-color: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(84, 44, 70, 0.1);
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(84, 44, 70, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    margin-bottom: 5px;
+}
+
+.price {
+    color: var(--rose);
+    font-weight: bold;
+}
+
+
+/* BUTTON */
+
+.btn {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--plum);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--rose);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--dusty-pink);
+    color: var(--plum);
+}
+
+.btn-light {
+    background-color: var(--ivory);
+    color: var(--plum);
+}
+
+
+/* CUSTOM ORDER SECTION */
+
+.custom-promo {
+    background-color: var(--plum);
+    color: var(--ivory);
+    padding: 40px;
+    margin: 60px 0;
+    border-radius: 25px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.custom-promo h2,
+.custom-promo p {
+    color: var(--ivory);
+}
+
+.custom-promo li {
+    padding: 5px;
+}
+
+
+/* FORM SECTION */
+
+.form-card,
+.summary-card {
+    background-color: var(--white);
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(84, 44, 70, 0.1);
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    color: var(--plum);
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--dusty-pink);
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: #FFFCFA;
+}
+
+/* FOCUS SELECTOR */
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border: 2px solid var(--rose);
+    box-shadow: 0 0 5px var(--dusty-pink);
+}
+
+textarea {
+    resize: vertical;
+}
+
+#customMessage {
+    min-height: 100px;
+}
+
+fieldset {
+    border: 1px solid var(--dusty-pink);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+legend {
+    color: var(--plum);
+    font-weight: bold;
+}
+
+
+/* CART SECTION */
+
+.cart-panel {
+    background-color: var(--white);
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(84, 44, 70, 0.1);
+}
+
+#count,
+#total {
+    color: var(--rose);
+    font-weight: bold;
+}
+
+#cart-list {
+    padding-left: 20px;
+}
+
+
+/* FOOTER */
+
+.site-footer {
+    background-color: var(--plum);
+    padding: 30px;
+    text-align: center;
+}
+
+.site-footer p {
+    color: var(--ivory);
+}
+
+.copyright {
+    color: var(--dusty-pink);
+    font-size: 13px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 800px) {
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .custom-promo {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 560px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+}

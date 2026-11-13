@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Qieys - Order Summary</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="brand">
+                QIEYS<span>.</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">About Us</a>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+
+        <section class="hero">
+
+            <h1>Order Summary</h1>
+
+            <p>Thank you for choosing Qieys Chocolate!</p>
+
+        </section>
+
+        <section class="summary-card">
+
+            <h2>Customer Information</h2>
+
+            <p>
+                Name: <span id="showName"></span>
+            </p>
+
+            <p>
+                Phone Number: <span id="showPhone"></span>
+            </p>
+
+            <p>
+                Address: <span id="showAddress"></span>
+            </p>
+
+        </section>
+
+        <section class="summary-card" id="cartDetails" style="display:none;">
+
+            <h2>Your Chocolate</h2>
+
+            <ul id="showItems"></ul>
+
+        </section>
+
+        <section class="summary-card" id="customDetails" style="display:none;">
+
+            <h2>Custom Chocolate</h2>
+
+            <p>
+                Flavor: <span id="showFlavor"></span>
+            </p>
+
+            <p>
+                Topping: <span id="showTopping"></span>
+            </p>
+
+            <p>
+                Shape: <span id="showShape"></span>
+            </p>
+
+            <p>
+                Size: <span id="showSize"></span>
+            </p>
+
+            <p>
+                Event: <span id="showEvent"></span>
+            </p>
+
+            <p>
+                Message: <span id="showMessage"></span>
+            </p>
+
+        </section>
+
+        <section class="section">
+
+            <a href="index.html" class="btn btn-primary">
+                Back to Home Page
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <p>Contact us at: nizamuddinrafiq25@gmail.com</p>
+
+        <p>WhatsApp: +6017-321 0364</p>
+
+        <p class="copyright">
+            &copy; 2026 Qieys Chocolate. All Rights Reserved.
+        </p>
+
+    </footer>
+
+    <script>
+
+        let order = JSON.parse(localStorage.getItem("order"));
+
+        if (order) {
+
+            document.getElementById("showName").textContent = order.name;
+
+            document.getElementById("showPhone").textContent = order.phoneNum;
+
+            document.getElementById("showAddress").textContent = order.address;
+
+            if (order.type === "cart") {
+
+                document.getElementById("cartDetails").style.display = "block";
+
+                let list = document.getElementById("showItems");
+
+                for (let i = 0; i < order.items.length; i++) {
+
+                    let li = document.createElement("li");
+
+                    li.textContent =
+                        order.items[i].name +
+                        " - RM" +
+                        order.items[i].price.toFixed(2);
+
+                    list.appendChild(li);
+
+                }
+
+            }
+
+            if (order.type === "custom") {
+
+                document.getElementById("customDetails").style.display = "block";
+
+                document.getElementById("showFlavor").textContent = order.flavor;
+
+                document.getElementById("showTopping").textContent = order.topping;
+
+                document.getElementById("showShape").textContent = order.shape;
+
+                document.getElementById("showSize").textContent = order.size;
+
+                document.getElementById("showEvent").textContent = order.event;
+
+                document.getElementById("showMessage").textContent = order.message;
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Qieys - Qieys Dreams</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="brand">
+                QIEYS<span>.</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">About Us</a>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+
+        <section class="hero">
+
+            <h1>Qieys Dreams</h1>
+
+            <p>
+                Your chocolate, your creativity!
+
+                Design your own chocolate by choosing
+                your favourite flavours, toppings and shapes.
+            </p>
+
+        </section>
+
+        <section class="section">
+
+            <div class="form-card">
+
+                <div class="section-heading">
+
+                    <h2>Create Your Custom Chocolate</h2>
+
+                    <p>
+                        Fill in the details below to create
+                        your personalised chocolate.
+                    </p>
+
+                </div>
+
+
+                <form id="customForm" onsubmit="saveCustomOrder(event)">
+
+                    <fieldset>
+
+                        <legend>Customer Information</legend>
+
+
+                        <label for="customName">Name:</label>
+
+                        <input type="text" id="customName" name="customName" placeholder="Enter your name" required>
+
+
+                        <label for="customPhoneNum">Phone Number:</label>
+
+                        <input type="tel" id="customPhoneNum" name="customPhoneNum"
+                            placeholder="Enter your phone number (without -)" required>
+
+
+                        <label for="customAddress">Address:</label>
+
+                        <textarea id="customAddress" name="customAddress" placeholder="Enter your address"
+                            required></textarea>
+
+                    </fieldset>
+
+                    <br><br>
+
+                    <fieldset>
+
+                        <legend>Custom Order Details</legend>
+
+
+                        <label for="customFlavor">
+                            Please select chocolate flavour:
+                        </label>
+
+                        <select name="customFlavor" id="customFlavor">
+
+                            <option value="Milk Chocolate">
+                                Milk Chocolate
+                            </option>
+
+                            <option value="Dark Chocolate">
+                                Dark Chocolate
+                            </option>
+
+                            <option value="White Chocolate">
+                                White Chocolate
+                            </option>
+
+                        </select>
+
+                        <label for="customTopping">
+                            Please select chocolate topping:
+                        </label>
+
+                        <select name="customTopping" id="customTopping">
+
+                            <option value="Nuts">Nuts</option>
+
+                            <option value="Caramel">Caramel</option>
+
+                            <option value="Cookies n Cream">
+                                Cookies n Cream
+                            </option>
+
+                        </select>
+
+                        <label for="customShape">
+                            Please select chocolate shape:
+                        </label>
+
+                        <select name="customShape" id="customShape">
+
+                            <option value="Round">Round</option>
+
+                            <option value="Square">Square</option>
+
+                            <option value="Heart">Heart</option>
+
+                        </select>
+
+                        <label for="customSize">
+                            Please select chocolate size:
+                        </label>
+
+                        <select name="customSize" id="customSize">
+
+                            <option value="Small">Small</option>
+
+                            <option value="Medium">Medium</option>
+
+                            <option value="Large">Large</option>
+
+                        </select>
+
+                        <label for="customEvent">
+                            Please select the event:
+                        </label>
+
+                        <select name="customEvent" id="customEvent">
+
+                            <option value="Birthday">Birthday</option>
+
+                            <option value="Wedding">Wedding</option>
+
+                            <option value="Anniversary">Anniversary</option>
+
+                        </select>
+
+                        <label for="customMessage">
+                            Any special message or instructions?
+                        </label>
+
+                        <textarea name="customMessage" id="customMessage"
+                            placeholder="Enter your message or instructions here"></textarea>
+
+                    </fieldset>
+
+                    <br><br>
+
+                    <button type="submit" class="btn btn-primary">
+                        Submit Custom Order
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <p>Contact us at: nizamuddinrafiq25@gmail.com</p>
+
+        <p>WhatsApp: +6017-321 0364</p>
+
+        <p class="copyright">
+            &copy; 2026 Qieys Chocolate. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Qieys - About Us</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="brand">
+                QIEYS<span>.</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">About Us</a>
+                <a href="#custom">Qieys Dreams</a>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+
+        <section class="cart-panel">
+
+            <h3>Cart (<span id="count">0</span> item)</h3>
+
+            <ul id="cart-list"></ul>
+
+            <p>
+                Jumlah: RM<span id="total">0</span>
+            </p>
+
+            <button class="btn btn-outline" onclick="clearCart()">
+                Clear Cart
+            </button>
+
+            <button class="btn btn-primary" onclick="checkout()">
+                Checkout
+            </button>
+
+        </section>
+
+        <section class="commercial">
+
+            <img src="images/qieys_gif.gif" alt="Qieys Commercial Video">
+
+        </section>
+
+        <audio id="bgMusic" loop>
+
+            <source src="audio/background_audio.mp3" type="audio/mpeg">
+
+        </audio>
+
+        <button onclick="toggleMusic()" id="musicBtn">
+            🔊 Play Music
+        </button>
+
+        <script>
+
+            let music = document.getElementById("bgMusic");
+            let musicBtn = document.getElementById("musicBtn");
+
+            function toggleMusic() {
+                if (music.paused) {
+                    music.play();
+                    musicBtn.innerHTML = "🔇 Pause Music";
+                } else {
+                    music.pause();
+                    musicBtn.innerHTML = "🔊 Play Music";
+                }
+            }
+
+        </script>
+
+        <section class="hero">
+
+            <h1>About Qieys</h1>
+
+            <p>
+                Qieys Chocolate began with one simple desire —
+                to bring happiness through every piece of chocolate.
+            </p>
+
+            <p>
+                We believe chocolate is more than just a sweet treat;
+                it is a way to celebrate little moments, express love,
+                and create memories with the people who matter most.
+
+                Every Qieys Chocolate product is carefully prepared
+                using quality ingredients and thoughtful details,
+                making each bite feel special.
+            </p>
+
+            <p>
+                From smooth, creamy milk chocolate to crunchy,
+                aromatic Biscoff toppings, every flavour is crafted
+                to deliver a truly satisfying experience.
+
+                We also accept custom orders for gifts, events,
+                celebrations, and special occasions — so every order
+                can be personalised to match your taste and theme.
+            </p>
+
+        </section>
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <h2>Our Products</h2>
+
+                <p>Grab yours now!</p>
+
+            </div>
+
+
+            <div class="product-grid">
+
+                <div class="product-card">
+
+                    <img src="images/milk_chocolate.jpg" alt="Biscoff Bar">
+
+                    <div class="product-info">
+
+                        <h3>Biscoff Bar</h3>
+
+                        <p class="price">From RM 19.90</p>
+
+                        <button class="btn btn-primary" onclick="addCart('Biscoff Bar', 19.90)">
+
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="product-card">
+
+                    <img src="images/white_chocolate.jpg" alt="White Cookie Crunch">
+
+                    <div class="product-info">
+
+                        <h3>White Cookie Crunch</h3>
+
+                        <p class="price">From RM 19.90</p>
+
+                        <button class="btn btn-primary" onclick="addCart('White Cookie Crunch', 19.90)">
+
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="product-card">
+
+                    <img src="images/dark_chocolate.jpg" alt="Peanut Noir">
+
+                    <div class="product-info">
+
+                        <h3>Peanut Noir</h3>
+
+                        <p class="price">From RM 19.90</p>
+
+                        <button class="btn btn-primary" onclick="addCart('Peanut Noir', 19.90)">
+
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="product-card">
+
+                    <img src="images/coins_chocolate.jpg" alt="Qieys Coins">
+
+                    <div class="product-info">
+
+                        <h3>Qieys Coins</h3>
+
+                        <p class="price">RM 9.90 (per kg)</p>
+
+                        <button class="btn btn-primary" onclick="addCart('Qieys Coins', 9.90)">
+
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="product-card">
+
+                    <img src="images/balls_chocolate.jpg" alt="Choco Pearls">
+
+                    <div class="product-info">
+
+                        <h3>Choco Pearls</h3>
+
+                        <p class="price">RM 9.90 (per kg)</p>
+
+                        <button class="btn btn-primary" onclick="addCart('Choco Pearls', 9.90)">
+
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="product-card">
+
+                    <img src="images/valentine_chocolate.jpg" alt="Sweetheart Special">
+
+                    <div class="product-info">
+
+                        <h3>Sweetheart Special</h3>
+
+                        <p class="price">From RM 29.90</p>
+
+                        <button class="btn btn-primary" onclick="addCart('Sweetheart Special', 29.90)">
+
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="custom-promo" id="custom">
+
+            <div>
+
+                <h2>Qieys Dreams</h2>
+
+                <p>
+                    Make your chocolate dreams come true!
+
+                    Create your own personalised chocolate
+                    by choosing your favourite flavour,
+                    toppings, shapes and sizes.
+                </p>
+
+                <a href="custom.html">
+
+                    <button class="btn btn-light">
+                        Create Your Chocolate
+                    </button>
+
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h2>How It Works</h2>
+
+                <ul>
+
+                    <li>Choose Your Flavour</li>
+
+                    <li>Choose Your Topping</li>
+
+                    <li>Choose Your Shape</li>
+
+                    <li>Choose Your Size</li>
+
+                    <li>Choose Your Event</li>
+
+                    <li>Enter Your Wish</li>
+
+                </ul>
+
+                <p>
+                    Now you are all set to create your
+                    custom chocolate!
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <p>Contact us at: nizamuddinrafiq25@gmail.com</p>
+
+        <p>WhatsApp: +6017-321 0364</p>
+
+        <p class="copyright">
+            &copy; 2026 Qieys Chocolate. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
