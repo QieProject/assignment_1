@@ -1,3 +1,7 @@
+/* Name: MUHAMMAD NIZAMUDDIN RAFIQ BIN MOHAMAD RASHMAN-->
+Matric No: 2026104989
+Group: RCS2512A */
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let total = 0;
 
